@@ -43,20 +43,7 @@
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #dc2626;
-        }
+    
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
@@ -344,49 +331,182 @@
 
         // 1. Reviews Array (Mock data based on 5.0 stars)
         const reviews = [
-            {
-                name: "Sarah Jenkins",
-                date: "2 weeks ago",
-                stars: 5,
-                text: "Alex is absolutely amazing! He detailed my SUV and it looks better than the day I bought it. The ceramic coating makes washing it so easy now. Highly recommend Detail Dawgs!",
-                initial: "S"
-            },
-            {
-                name: "Mike T.",
-                date: "1 month ago",
-                stars: 5,
-                text: "Best detailer in the area, hands down. Punctual, professional, and pays attention to the smallest details. He got stains out of my upholstery that I thought were permanent.",
-                initial: "M"
-            },
-            {
-                name: "Jason Rodriguez",
-                date: "2 months ago",
-                stars: 5,
-                text: "Detail Dawgs brought my truck back to life. The paint correction service removed all the swirl marks. Alex is a true professional.",
-                initial: "J"
-            },
-            {
-                name: "Emily White",
-                date: "3 months ago",
-                stars: 5,
-                text: "Convenient mobile service and excellent results. My car smells fresh and looks shiny. Will definitely be using them again for my husband's car.",
-                initial: "E"
-            },
-            {
-                name: "David K.",
-                date: "3 months ago",
-                stars: 5,
-                text: "Great communication and fair pricing for the quality of work delivered. 5 stars all the way!",
-                initial: "D"
-            },
-            {
-                name: "Amanda L.",
-                date: "4 months ago",
-                stars: 5,
-                text: "Professional, polite, and hardworking. Alex took his time and didn't cut any corners. The interior detail was flawless.",
-                initial: "A"
-            }
-        ];
+    {
+        "name": "Andrea Karow",
+        "date": "3 weeks ago",
+        "stars": 5,
+        "text": "These guys ceramic coated my car a couple weeks ago, and they came for another detail yesterday and did an amazing job!!! It cleaned up a lot better after the coating, I cannot recommend them enough!!",
+        "initial": "A"
+    },
+    {
+        "name": "Nicolas Rodriguez",
+        "date": "7 months ago",
+        "stars": 5,
+        "text": "Friendly, professional, and efficient with the job! Had a couple scratches from being on the road so long but they managed to make my car look brand new. Definitely recommend the ceramic coating and Detail dawgs in general to make sure your car is always looking its best!",
+        "initial": "N"
+    },
+    {
+        "name": "Alejandro Rodriguez",
+        "date": "7 months ago",
+        "stars": 5,
+        "text": "Detail dawgs did an incredible job on my Maserati I went for the full premium wax and polish package and it’s like my car is back in the showroom. Truly appreciate doing business with young guys i can not only trust, but also share a laugh with. Definitely recommend their services and would rate it 10 stars if i could.",
+        "initial": "A"
+    },
+    {
+        "name": "Fi Lo",
+        "date": "a week ago",
+        "stars": 5,
+        "text": "Detail Dawgs did a great job on my car! Found them at work after they did my coworkers car and our now my go to for car detailing! Friendly and professional, definitely recommend!",
+        "initial": "F"
+    },
+    {
+        "name": "Gilbert Fernandez",
+        "date": "6 months ago",
+        "stars": 5,
+        "text": "Detail Dawgs is a mobile company that provides services at your place of work or home. This is our 1st car detail and ceramic coating experience. The two owners spent 5.5 hrs. carefully detailing and preparing our Tesla Model S Plaid. They not only detailed the outside, but the interior and wheels and tires as well. The car looks amazing, the picture shown here is after a trip to Jacksonville, after a night outside, all it took was a dry micro fiber rag to clean it as seen here. These guys are very detail oriented and do not rush through the job.",
+        "initial": "G"
+    },
+    {
+        "name": "Alexander Sanderson",
+        "date": "6 months ago",
+        "stars": 5,
+        "text": "Detail Dawgs did an amazing job on my car! The attention to detail was impressive, from the spotless interior to the deep shine on the exterior, it looked brand new. They were professional, showed up on time, and delivered exactly what was promised. Highly recommend if you want your car to stand out!",
+        "initial": "A"
+    },
+    {
+        "name": "Joey Spaletto",
+        "date": "a month ago",
+        "stars": 5,
+        "text": "the detail dawgs did an amazing job. my car has never looked better, i cant believe the absolute magic they performed. They didn't mess up a single inch of not only my car, but property as well. I cant believe I'm writing this as they sit at a 4.6 star rating, because they deserve a five star rating",
+        "initial": "J"
+    },
+    {
+        "name": "aj holmes",
+        "date": "a month ago",
+        "stars": 5,
+        "text": "The detail dawgs are some of the best people i’ve ever worked with! Did a great job with the family car, extremely great customer service and handled everything with great care. Would thousand percent recommend to anyone!",
+        "initial": "A"
+    },
+    {
+        "name": "Karla Rodriguez Geara",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "My car looks brand new, I couldn’t be happier with the service I received! The team is extremely professional, efficient, punctual, friendly, and clearly passionate about what they do. Highly recommended if you’re looking to give your car the care it deserves!",
+        "initial": "K"
+    },
+    {
+        "name": "Karoline Fothergill",
+        "date": "3 months ago",
+        "stars": 5,
+        "text": "Best car detailing business in South Florida. I’ve been to other detailers so honestly wasn’t really expecting extreme results as I requested the basic service. My car was returned and I was genuinely shocked at the results. My car has never looked as good as it did after a basic detailing service. They have set such a high standard especially with their work ethic. Both Alex and Matteo are intelligent, hard workers who have a passion for their craft. I’d recommend them to anyone looking for detail services.",
+        "initial": "K"
+    },
+    {
+        "name": "Ricky Rodriguez",
+        "date": "2 months ago",
+        "stars": 5,
+        "text": "I wasn’t sure what to expect from Detail Dawgs, I found them on instagram and saw they were local to me. My car had gotten pretty dirty and I figured I would give a local company some work. By far the best decision I could’ve made. They were professional, considerate, and hardworking. And left my car shiny like a diamond. Gonna use them again 100%",
+        "initial": "R"
+    },
+    {
+        "name": "Jessica",
+        "date": "3 months ago",
+        "stars": 5,
+        "text": "Hands down the best wash my car has ever had! My car was left spotless. I would totally recommend! Thanks Alex for leaving my car nice and clean!",
+        "initial": "J"
+    },
+    {
+        "name": "Veronica Geara",
+        "date": "7 months ago",
+        "stars": 5,
+        "text": "Absolutely Impressed! I recently had my Volvo detailed by Detail Dawgs, and I couldn’t be happier with the results! From the moment they came in my driveway to the time they finished, the service was professional, friendly, and top-notch. My vehicle looked brand new—inside and out. Every surface was spotless, the upholstery was fresh and clean, and even the smallest details were taken care of. They clearly take pride in their work and it shows. Highly recommend this service to anyone who wants their car to shine like it’s fresh off the lot!",
+        "initial": "V"
+    },
+    {
+        "name": "C Sanchez",
+        "date": "6 months ago",
+        "stars": 5,
+        "text": "The Detail Dawg crew know their stuff. They are professional, timely, and very detail oriented with the work they did on my BMW exterior and interior. I had to remind myself that I had my car for years cause it's got a fresh out the factory feel to it after their work. 1000% I would recommend.",
+        "initial": "C"
+    },
+    {
+        "name": "David Sanderson",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "Alex and his team did an amazing job detailing my Volkswagen Jetta!! Will DEFINITELY be using their services again, thanks boys!!",
+        "initial": "D"
+    },
+    {
+        "name": "Daniella Vazquez",
+        "date": "a month ago",
+        "stars": 5,
+        "text": "Great service! My car looks brand new.",
+        "initial": "D"
+    },
+    {
+        "name": "itala ream",
+        "date": "7 months ago",
+        "stars": 5,
+        "text": "Timely and excellent work. Ceramic coat next. These guys are very hard working. Give them a try!",
+        "initial": "I"
+    },
+    {
+        "name": "Yeli Martinez",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "Car is squeaky Clean! Very profesional team.",
+        "initial": "Y"
+    },
+    {
+        "name": "Nick Díaz",
+        "date": "a month ago",
+        "stars": 5,
+        "text": "Car looking clean and beautiful again :)",
+        "initial": "N"
+    },
+    {
+        "name": "Sabrina Rodriguez",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "They are truly the best",
+        "initial": "S"
+    },
+    {
+        "name": "César Fernández",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "Great service!",
+        "initial": "C"
+    },
+    {
+        "name": "Orlando Tortolero",
+        "date": "a week ago",
+        "stars": 5,
+        "text": "",
+        "initial": "O"
+    },
+    {
+        "name": "Stacy B.",
+        "date": "a month ago",
+        "stars": 5,
+        "text": "",
+        "initial": "S"
+    },
+    {
+        "name": "A.E.G Bube",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "",
+        "initial": "A"
+    },
+    {
+        "name": "Luis Geara",
+        "date": "5 months ago",
+        "stars": 5,
+        "text": "",
+        "initial": "L"
+    }
+];
 
         // 2. Gallery Array (Using Unsplash placeholders for auto detailing)
         const galleryImages = [
