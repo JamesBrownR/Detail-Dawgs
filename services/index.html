@@ -1,1 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Detail Dawgs</title>
+    <meta name="description" content="Explore our premium auto detailing services including exterior detailing, interior restoration, paint correction, and ceramic coating.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0f172a',
+                        'brand-blue': '#1e3a8a',
+                        'brand-red': '#dc2626',
+                        'brand-gray': '#334155',
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .services-hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-brand-dark/95 backdrop-blur-sm border-b border-white/10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../Detail-Dawgs.png" alt="Detail Dawgs Logo" class="h-12 w-auto md:h-14 transition-transform group-hover:scale-105">
+                <div class="hidden md:block">
+                    <span class="block text-white font-heading font-bold text-lg leading-tight tracking-wider">DETAIL DAWGS</span>
+                    <span class="block text-brand-red text-xs font-bold tracking-widest">AUTO DETAILER</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-white hover:text-brand-red font-semibold transition-colors text-sm uppercase tracking-wide">Home</a>
+                <a href="#packages" class="text-white hover:text-brand-red font-semibold transition-colors text-sm uppercase tracking-wide">Packages</a>
+                <a href="#addons" class="text-white hover:text-brand-red font-semibold transition-colors text-sm uppercase tracking-wide">Add-Ons</a>
+                <a href="../index.html#reviews" class="text-white hover:text-brand-red font-semibold transition-colors text-sm uppercase tracking-wide">Reviews</a>
+                <a href="tel:+19547895957" class="bg-brand-red hover:bg-red-700 text-white px-6 py-2 rounded-lg font-bold transition-all transform hover:-translate-y-0.5 shadow-lg shadow-red-900/20">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-800 absolute w-full">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="../index.html" class="text-white hover:text-brand-red font-semibold" onclick="toggleMenu()">Home</a>
+                <a href="#packages" class="text-white hover:text-brand-red font-semibold" onclick="toggleMenu()">Packages</a>
+                <a href="#addons" class="text-white hover:text-brand-red font-semibold" onclick="toggleMenu()">Add-Ons</a>
+                <a href="../index.html#reviews" class="text-white hover:text-brand-red font-semibold" onclick="toggleMenu()">Reviews</a>
+                <a href="tel:+19547895957" class="text-brand-red font-bold" onclick="toggleMenu()">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="services-hero-bg min-h-[60vh] flex items-center justify-center relative pt-20">
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-50 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 text-center text-white relative z-10">
+            <h1 class="text-5xl md:text-7xl font-heading font-black mb-6 leading-tight">
+                Our <span class="text-brand-red">Premium</span> Services
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light max-w-3xl mx-auto">
+                Professional mobile detailing packages designed to restore, protect, and maintain your vehicle's beauty
+            </p>
+            <a href="tel:+19547895957" class="inline-flex items-center gap-2 bg-brand-red hover:bg-red-700 text-white text-lg px-8 py-4 rounded-lg font-bold transition-all transform hover:scale-105 shadow-xl">
+                <i class="fa-solid fa-phone"></i> Call for Quote
+            </a>
+        </div>
+    </header>
+
+    <!-- Service Packages Section -->
+    <section id="packages" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-red font-bold tracking-wider uppercase text-sm mb-2">Choose Your Package</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-black text-brand-dark">Detailing Packages</h3>
+                <div class="w-24 h-1 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Each package is tailored to give your vehicle the care it deserves. All services are performed at your location.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Basic Package -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-t-4 border-brand-blue opacity-0 animate-fade-in-up stagger-1">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-spray-can text-3xl text-brand-blue"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading font-bold text-brand-dark mb-2">Basic Detail</h4>
+                        <p class="text-gray-600 mb-6">Perfect for regular maintenance and quick refreshes</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-blue mt-1"></i>
+                                <span class="text-gray-700">Hand wash & dry exterior</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-blue mt-1"></i>
+                                <span class="text-gray-700">Wheel & tire cleaning</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-blue mt-1"></i>
+                                <span class="text-gray-700">Window cleaning (inside & out)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-blue mt-1"></i>
+                                <span class="text-gray-700">Interior vacuum</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-blue mt-1"></i>
+                                <span class="text-gray-700">Dashboard & console wipe down</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-blue mt-1"></i>
+                                <span class="text-gray-700">Door jamb cleaning</span>
+                            </div>
+                        </div>
+                        
+                        <a href="tel:+19547895957" class="block w-full text-center bg-brand-blue hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-t-4 border-brand-red relative opacity-0 animate-fade-in-up stagger-2">
+                    <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase">
+                        Most Popular
+                    </div>
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-red-50 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-gem text-3xl text-brand-red"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading font-bold text-brand-dark mb-2">Premium Detail</h4>
+                        <p class="text-gray-600 mb-6">Complete interior and exterior transformation</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700 font-semibold">Everything in Basic, plus:</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Clay bar treatment</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Machine polish & wax</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Deep interior shampoo</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Leather conditioning</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Headlight restoration</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Tire shine application</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-red mt-1"></i>
+                                <span class="text-gray-700">Pet hair removal</span>
+                            </div>
+                        </div>
+                        
+                        <a href="tel:+19547895957" class="block w-full text-center bg-brand-red hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-colors">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Elite Package -->
+                <div class="bg-gradient-to-br from-brand-dark to-brand-gray text-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-t-4 border-yellow-500 opacity-0 animate-fade-in-up stagger-3">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-crown text-3xl text-yellow-400"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Elite Detail</h4>
+                        <p class="text-gray-300 mb-6">The ultimate showroom-quality finish</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200 font-semibold">Everything in Premium, plus:</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">Paint correction (1-step)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">Premium ceramic coating</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">Engine bay detailing</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">Complete fabric protection</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">Odor elimination treatment</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">UV protection for interior</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+                                <span class="text-gray-200">6-month protection guarantee</span>
+                            </div>
+                        </div>
+                        
+                        <a href="tel:+19547895957" class="block w-full text-center bg-yellow-500 hover:bg-yellow-600 text-brand-dark font-bold py-3 rounded-lg transition-colors">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Special Services -->
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Paint Correction -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-brand-red opacity-0 animate-fade-in-up stagger-3">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-wand-magic-sparkles text-xl text-brand-red"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-heading font-bold text-brand-dark mb-2">Paint Correction</h5>
+                            <p class="text-gray-600 mb-4">Remove swirls, scratches, and oxidation with our multi-step paint correction process. Restore your vehicle's paint to a mirror-like finish.</p>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><i class="fa-solid fa-circle-check text-brand-red mr-2"></i>1-Step, 2-Step, or 3-Step options</li>
+                                <li><i class="fa-solid fa-circle-check text-brand-red mr-2"></i>Removes 70-95% of defects</li>
+                                <li><i class="fa-solid fa-circle-check text-brand-red mr-2"></i>Professional-grade polishers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ceramic Coating -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-brand-blue opacity-0 animate-fade-in-up stagger-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-shield-halved text-xl text-brand-blue"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-heading font-bold text-brand-dark mb-2">Ceramic Coating</h5>
+                            <p class="text-gray-600 mb-4">Long-lasting protection that bonds to your paint. Provides superior gloss, hydrophobic properties, and protection against UV rays and contaminants.</p>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><i class="fa-solid fa-circle-check text-brand-blue mr-2"></i>2-5 year protection options</li>
+                                <li><i class="fa-solid fa-circle-check text-brand-blue mr-2"></i>Self-cleaning properties</li>
+                                <li><i class="fa-solid fa-circle-check text-brand-blue mr-2"></i>Warranty included</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-Ons Section -->
+    <section id="addons" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-red font-bold tracking-wider uppercase text-sm mb-2">Enhance Your Detail</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-black text-brand-dark">Add-On Services</h3>
+                <div class="w-24 h-1 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-red/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-lightbulb text-brand-red text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Headlight Restoration</h5>
+                    <p class="text-gray-600 text-sm">Remove oxidation and restore clarity</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-car-side text-brand-blue text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Engine Bay Detail</h5>
+                    <p class="text-gray-600 text-sm">Deep clean and degrease engine compartment</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-red/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-dog text-brand-red text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Pet Hair Removal</h5>
+                    <p class="text-gray-600 text-sm">Specialized tools for stubborn pet hair</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-wind text-brand-blue text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Odor Elimination</h5>
+                    <p class="text-gray-600 text-sm">Ozone treatment for persistent odors</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-red/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-couch text-brand-red text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Fabric Protection</h5>
+                    <p class="text-gray-600 text-sm">Guard against stains and spills</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-droplet text-brand-blue text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Water Spot Removal</h5>
+                    <p class="text-gray-600 text-sm">Safely remove hard water deposits</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-red/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-car-burst text-brand-red text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Scratch Removal</h5>
+                    <p class="text-gray-600 text-sm">Minor scratch and scuff repair</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-circle-dot text-brand-blue text-xl"></i>
+                    </div>
+                    <h5 class="font-bold text-brand-dark mb-2">Clay Bar Treatment</h5>
+                    <p class="text-gray-600 text-sm">Remove bonded contaminants</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-brand-dark text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-red font-bold tracking-wider uppercase text-sm mb-2">Simple Process</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-black">How It Works</h3>
+                <div class="w-24 h-1 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+                        1
+                    </div>
+                    <h4 class="text-xl font-heading font-bold mb-3">Book Your Service</h4>
+                    <p class="text-gray-400">Call or text us to schedule your detailing appointment</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-blue rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+                        2
+                    </div>
+                    <h4 class="text-xl font-heading font-bold mb-3">We Come to You</h4>
+                    <p class="text-gray-400">Our mobile unit arrives at your home or office</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+                        3
+                    </div>
+                    <h4 class="text-xl font-heading font-bold mb-3">Professional Detail</h4>
+                    <p class="text-gray-400">We transform your vehicle with expert care</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-blue rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+                        4
+                    </div>
+                    <h4 class="text-xl font-heading font-bold mb-3">Enjoy the Results</h4>
+                    <p class="text-gray-400">Drive away in a vehicle that looks brand new</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-brand-red to-red-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Book your mobile detailing service today and experience the Detail Dawgs difference. We bring the showroom shine to your driveway.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="tel:+19547895957" class="inline-flex items-center justify-center gap-2 bg-white text-brand-red font-black text-lg px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl hover:bg-gray-100 transition-all transform hover:-translate-y-1">
+                    <i class="fa-solid fa-phone"></i> Call (954) 789-5957
+                </a>
+                <a href="../index.html#contact" class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white hover:bg-white hover:text-brand-red text-white font-bold text-lg px-8 py-4 rounded-lg transition-all">
+                    Get Directions <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-300 pt-20 border-t border-gray-800">
+        <div class="container mx-auto px-6 pb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- Info Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <img src="../Detail-Dawgs.png" alt="Detail Dawgs" class="h-16 w-auto">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white font-heading">DETAIL DAWGS</h2>
+                            <p class="text-sm text-gray-400">Owners: Alex & Matteo</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-400 mb-4">Premium mobile auto detailing serving Fort Lauderdale and surrounding areas.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-heading">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#packages" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="../index.html#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="../index.html#reviews" class="hover:text-white transition-colors">Reviews</a></li>
+                        <li><a href="../index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-heading">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-brand-red mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-white">Phone</p>
+                                <a href="tel:+19547895957" class="hover:text-white transition-colors">(954) 789-5957</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-red mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-white">Service Area</p>
+                                <p>Fort Lauderdale, FL</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-brand-red mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-white">Hours</p>
+                                <p>Mon-Sun: 7:00 AM – 7:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-black/40 py-6 text-center text-sm text-gray-500 border-t border-gray-800">
+            <p>&copy; 2025 Detail Dawgs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
